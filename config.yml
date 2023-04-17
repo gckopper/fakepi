@@ -1,0 +1,11 @@
+/batata/:
+  GET:
+    file: a.json
+  POST:
+    body: 
+    file: a.json
+/cenoura/:
+  GET:
+    file: a.json
+    headers:
+      Ping: Pong
