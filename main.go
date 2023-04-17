@@ -65,9 +65,9 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	method, exists := data[r.URL.Path]
+	method, exists := data[r.URL.RequestURI()]
 	if !exists {
-		log.Printf("This path is not allowed %s\n", r.URL.Path)
+		log.Printf("This path is not allowed %s\n", r.URL.RequestURI())
 		w.WriteHeader(http.StatusNotFound)
 		return
 	}
